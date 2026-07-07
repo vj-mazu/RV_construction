@@ -33,12 +33,18 @@
     scroll-behavior: smooth;
 }
 
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+
 body {
     font-family: var(--font-sans);
     background-color: var(--bg-light);
     color: var(--text-dark);
     line-height: 1.6;
-    overflow-x: hidden;
 }
 
 /* Custom Selection Colors */
@@ -93,6 +99,7 @@ img {
 .section {
     padding: 8rem 0;
     position: relative;
+    overflow: hidden;
 }
 
 .section-dark {
@@ -1797,6 +1804,16 @@ img {
         grid-template-columns: 1fr 1fr;
         gap: 3rem;
     }
+
+    /* Tablet and Mobile adjustments to prevent horizontal badge overlap */
+    .about-experience-badge {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -2rem;
+    }
+    .about-img-accent {
+        bottom: -2rem;
+    }
 }
 
 @media (max-width: 991px) {
@@ -1858,16 +1875,7 @@ img {
         grid-template-columns: 1fr;
         gap: 2.5rem;
     }
-    
-    /* Mobile overlap fixes */
-    .about-experience-badge {
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: -2rem;
-    }
-    .about-img-accent {
-        bottom: -2rem;
-    }
+    /* Grid items flex settings on mobile viewports */
     
     .service-card-new {
         flex-direction: column;
