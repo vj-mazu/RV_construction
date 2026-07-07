@@ -1013,28 +1013,28 @@ img {
     line-height: 1.7;
 }
 
-/* ---- New Animation Types ---- */
+/* ---- Timeline Animations Triggered by Parent .animated ---- */
 
-/* Flip In (3D card flip from Y-axis) */
-.animate-on-scroll[data-animation="flip-in"] {
-    transform: perspective(800px) rotateY(25deg);
+/* Initial state of the cards */
+.timeline-item .timeline-content {
     opacity: 0;
+    transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.animate-on-scroll[data-animation="flip-in"].animated {
-    transform: perspective(800px) rotateY(0deg);
+/* Odd items (slide from right, tilt) */
+.timeline-item[data-animation="slide-right"] .timeline-content {
+    transform: perspective(800px) rotateY(15deg) translateX(30px);
+}
+
+/* Even items (slide from left, tilt) */
+.timeline-item[data-animation="slide-left"] .timeline-content {
+    transform: perspective(800px) rotateY(-15deg) translateX(-30px);
+}
+
+/* Animated state of the cards */
+.timeline-item.animated .timeline-content {
     opacity: 1;
-}
-
-/* Rotate In (slight rotation + slide up) */
-.animate-on-scroll[data-animation="rotate-in"] {
-    transform: rotate(-6deg) translateY(40px);
-    opacity: 0;
-}
-
-.animate-on-scroll[data-animation="rotate-in"].animated {
-    transform: rotate(0) translateY(0);
-    opacity: 1;
+    transform: perspective(800px) rotateY(0deg) translateX(0);
 }
 
 /* Light styling theme option for Our Methodology section */
@@ -2023,6 +2023,13 @@ img {
     .timeline-content {
         padding: 1.5rem;
         border-radius: 12px;
+        transform: translateY(20px) !important;
+        opacity: 0;
+        transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+    .timeline-item.animated .timeline-content {
+        transform: translateY(0) !important;
+        opacity: 1;
     }
     .timeline-icon {
         width: 48px;
