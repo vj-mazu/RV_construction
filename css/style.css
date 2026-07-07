@@ -2,11 +2,11 @@
    RV CONSTRUCTION PREMIUM CORE DESIGN STYLESHEET
    ========================================== */
 
-/* Design Tokens & Theme Variables */
+/* Design Tokens & Theme Variables - Reverted Navy/Slate background with Luxury Bronze/Gold Accents */
 :root {
-    --primary: #f97316;       /* Vibrant Orange (Logo Matching) */
-    --primary-dark: #ea580c;  /* Deep Orange for hover */
-    --primary-light: #ffedd5; /* Soft Peach background tint */
+    --primary: #b59468;       /* Luxury Bronze/Gold (Vibhuti Style) */
+    --primary-dark: #9e7e53;  /* Deep Bronze for hover */
+    --primary-light: #f5ede3; /* Warm Soft Ivory-Peach tint */
     --secondary: #0c1a30;     /* Deep Royal Navy */
     --secondary-light: #1e293b; /* Sleek Charcoal Navy */
     --accent: #22c55e;        /* WhatsApp Green */
@@ -15,12 +15,12 @@
     --text-dark: #0f172a;     /* Very dark gray/black for maximum readability */
     --text-muted: #64748b;    /* Elegant gray for description details */
     --text-light: #ffffff;    /* Light text for dark sections */
-    --font-serif: 'Playfair Display', Georgia, serif;
-    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
     --transition-smooth: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
     --transition-fast: all 0.25s ease;
     --card-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.08);
-    --card-shadow-hover: 0 20px 40px -15px rgba(249, 115, 22, 0.15);
+    --card-shadow-hover: 0 20px 40px -15px rgba(181, 148, 104, 0.25);
     --glass-bg: rgba(15, 23, 42, 0.7);
     --glass-border: rgba(255, 255, 255, 0.08);
 }
